@@ -1,0 +1,155 @@
+@extends('front.master')
+@section('content')
+
+<div class="col-sm-8 col-md-8 col-lg-9 mtb_30">
+@foreach($Product as $product)
+          <!-- =====  BANNER STRAT  ===== -->
+          <div class="breadcrumb ptb_20">
+            <h1>New LCDScreen...</h1>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="category_page.html">Products</a></li>
+              <li class="active">New LCDS...</li>
+            </ul>
+          </div>
+          <!-- =====  BREADCRUMB END===== -->
+          <div class="row mt_10 ">
+            <div class="col-md-6">
+              <div><a class="thumbnails"> <img data-name="product_image" src="{{url('/')}}/uploads/product/{{$product->image_one}}" alt="" /></a></div>
+              <div id="product-thumbnail" class="owl-carousel">
+                <div class="item">
+                  <div class="image-additional"><a class="thumbnail" href="{{url('/')}}/uploads/product/{{$product->image_one}}" data-fancybox="group1"> <img src="{{url('/')}}/uploads/product/{{$product->image_one}}" alt="" /></a></div>
+                </div>
+                <div class="item">
+                  <div class="image-additional"><a class="thumbnail" href="{{url('/')}}/uploads/product/{{$product->image_two}}" data-fancybox="group1"> <img src="{{url('/')}}/uploads/product/{{$product->image_two}}" alt="" /></a></div>
+                </div>
+                <div class="item">
+                  <div class="image-additional"><a class="thumbnail" href="{{url('/')}}/uploads/product/{{$product->image_three}}" data-fancybox="group1"> <img src="{{url('/')}}/uploads/product/{{$product->image_three}}" alt="" /></a></div>
+                </div>
+                <!-- <div class="item">
+                  <div class="image-additional"><a class="thumbnail" href="images/product/product4.jpg" data-fancybox="group1"> <img src="images/product/product4.jpg" alt="" /></a></div>
+                </div>
+                <div class="item">
+                  <div class="image-additional"><a class="thumbnail" href="images/product/product5.jpg" data-fancybox="group1"> <img src="images/product/product5.jpg" alt="" /></a></div>
+                </div>
+                <div class="item">
+                  <div class="image-additional"><a class="thumbnail" href="images/product/product6.jpg" data-fancybox="group1"> <img src="images/product/product6.jpg" alt="" /></a></div>
+                </div>
+                <div class="item">
+                  <div class="image-additional"><a class="thumbnail" href="images/product/product7.jpg" data-fancybox="group1"> <img src="images/product/product7.jpg" alt="" /></a></div>
+                </div> -->
+              </div>
+            </div>
+            <div class="col-md-6 prodetail caption product-thumb">
+              <h4 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">{{$product->name}}</a></h4>
+              <div class="rating">
+                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span>
+                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span>
+                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span>
+                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span>
+                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span>
+              </div>
+              <span class="price mb_20"><span class="amount"><span class="currencySymbol">KSH</span>{{$product->price}}</span>
+              </span>
+              <hr>
+              <ul class="list-unstyled product_info mtb_20">
+                <li>
+                  <label>Brand:</label>
+                  <span> <a href="#">Sokoafya</a></span></li>
+                <li>
+                  <label>Product Code:</label>
+                  <span> product {{$product->code}}</span></li>
+                <li>
+                  <label>Availability:</label>
+                  <span> In Stock</span></li>
+              </ul>
+              <hr>
+              <p class="product-desc mtb_30"> {!!html_entity_decode($product->content)!!}</p>
+              <div id="product">
+                
+                <div class="qty mt_30 form-group2">
+                  <label>Qty</label>
+                  <input name="product_quantity" min="1" value="1" type="number">
+                </div>
+               
+                <div class="button-group">
+                  <a href="{{url('cart/addWishlist/')}}/{{$product->id}}"><div class="wishlist"><span>wishlist</span></div></a>
+                  <a href="{{url('/shop')}}/{{$product->name}}"><div class="quickview"><span>Quick View</span></div></a>
+                  <a href="{{url('/addToCart')}}/{{$product->id}}"><div class="add-to-cart"><span>Add to cart</span></div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div id="exTab5" class="mtb_30">
+                <ul class="nav nav-tabs">
+                  <li class="active"> <a href="#1c" data-toggle="tab">Overview</a> </li>
+                  <li><a href="#2c" data-toggle="tab">Reviews (<?php $Review = DB::table('reviews')->where('product_id',$product->id)->where('status','1')->get(); $countReview=count($Review); echo $countReview; ?>)</a> </li>
+                </ul>
+                <div class="tab-content mt_20">
+                  <div class="tab-pane active" id="1c">
+                    <p>{!!html_entity_decode($product->content)!!}</p>
+                  </div>
+                  <div class="tab-pane" id="2c">
+                    <form class="form-horizontal" id="reviewform">
+                      <div id="review"></div>
+                      <div class="author-about mt_50">
+                        <h3 class="author-about-title">Comments</h3>
+                        <div class="author mtb_30">
+                          @foreach($Review as $review)
+                          <div class="author-body">
+                            <h5 class="author-name"><a href="#">{{$review->name}}</a></h5>
+                            <div class="author-content mt_10">{!!html_entity_decode($review->content)!!}</div>
+                          </div>
+                          @endforeach
+                        </div>
+                      </div>
+
+                      <h4 class="mt_20 mb_30">Write a review</h4>
+                      <div class="alert alert-success" id="info-alert-review"></div>
+                      <div class="form-group required">
+                        <div class="col-sm-12">
+                          <label class="control-label" for="input-name">Your Name</label>
+                          <input name="name" value="" id="input-name" class="form-control" type="text">
+                        </div>
+                        <div class="col-sm-12">
+                          <label class="control-label" for="input-name">Your Email</label>
+                          <input name="email" value="" id="input-name" class="form-control" type="email">
+                        </div>
+                      </div>
+                      <input type="hidden" name="product_id" value="{{$product->id}}">
+                      <div class="form-group required">
+                        <div class="col-sm-12">
+                          <label class="control-label" for="input-review">Your Review</label>
+                          <textarea name="review" rows="5" id="input-review" class="form-control"></textarea>
+                          
+                        </div>
+                      </div>
+                      <div class="form-group required">
+                        <div class="col-md-6">
+                          <label class="control-label">Rating</label>
+                          <div class="rates"><span>Bad</span>
+                              <input id="star1" name="rating" value="1" type="radio"><label for="star1"></label>
+                              <input id="star2" name="rating" value="2" type="radio"><label for="star2"></label>
+                              <input id="star3" name="rating" value="3" type="radio"><label for="star3"></label>
+                              <input id="star4" name="rating" value="4" type="radio"><label for="star4"></label>
+                              <input id="star5" name="rating" value="5" type="radio"><label for="star5"></label>
+														<span>Good</span></div>
+                          </div>
+                        <div class="col-md-6">
+                          <div class="buttons pull-right">
+                            <button id="rsubmit" class="btn btn-md btn-link">Submit Review</button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+             
+                </div>
+              </div>
+            </div>
+          </div>
+@endforeach          
+        </div>
+@endsection
