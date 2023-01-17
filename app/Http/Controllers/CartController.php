@@ -33,6 +33,12 @@ use SEOMeta;
 use Twitter;
 class CartController extends Controller
 {
+
+    // public function __construct()
+    // {
+    //     $this->middleware('user-access:user');
+    // }
+
     public function index(){
         //Perfom a check to ensure that the cart is not empty
         $SEOSettings = DB::table('seosettings')->get();
@@ -146,7 +152,7 @@ class CartController extends Controller
     }
 
     public function addCart($id){
-        $product = Product::find($id); //This gets product by id
+        $product = Product::find($id);
          \Cart::add($id, $product->name, 1,$product->price);
 
          return Redirect::back();

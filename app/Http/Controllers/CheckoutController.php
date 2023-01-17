@@ -43,10 +43,10 @@ class CheckoutController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('user-access:user');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('user-access:user');
+    // }
 
     public function index(){
         $keywords = '';

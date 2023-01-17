@@ -140,6 +140,7 @@ Route::post('/blog/search','BlogController@search_blog');
 Route::get('/blog/tag/{tag}','BlogController@tag');
 Route::post('/blog/comment','BlogController@add_comment');
 
+Auth::routes();
 
 // Cart Routes
 Route::get('/cart','App\Http\Controllers\CartController@index');
