@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {!! SEOMeta::generate() !!}
         <meta property="og:description" content="Fixtech Printer Solutions, Commercial Printers, Tonners, Bizhub, Kyocera,  Ricoh Printers">
-        <meta property="og:image" content="Konica-Minolta-Bizhub-227-A3-MFP-2GB-fb_pixels.jpg" />
+        <meta property="og:image" content="{{url('/')}}/uploads/product/Konica-Minolta-Bizhub-227-A3-MFP-2GB-fb_pixels.jpg" />
         <meta property="fb:app_id" content="431980657174772" />
         {!! OpenGraph::generate() !!}
         {{-- {!! Twitter::generate() !!}

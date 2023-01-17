@@ -2,28 +2,24 @@
     {
       "@context": "http://www.schema.org",
       "@type": "ProfessionalService",
-      "name": "Amani Vehicle Sounds",
-      "url": "http://amanivehiclesounds.co.ke/",
-      "logo": "https://amanivehiclesounds.co.ke/uploads/logo/amaniCropped.png",
-      "sameAs": [ 
-        "https://web.facebook.com/amanivehiclesounds",
-        "https://www.instagram.com/amanivehiclesounds",
-        "https://www.linkedin.com/company/amani-vehicle-sounds",
-        "https://twitter.com/amanisounds",
-        "https://www.youtube.com/channel/UCBBJkj3YILwheHsp5KGtjsA"
+      "name": "Fixtech Printer Solutions",
+      "url": "http://fixtech.co.ke/",
+      "logo": "https://fixtech.co.ke/uploads/product/Konica-Minolta-Bizhub-227-A3-MFP-2GB-fb_pixels.jpg",
+      "sameAs": [
+        "https://www.facebook.com/Fixtech-Printer-Solutions-101410055108549"
       ],
       "priceRange": "$$$$",
-      "image": "https://amanivehiclesounds.co.ke/uploads/logo/amaniCropped.png",
-      "description": "Are you looking to replace or upgrade your car music system?We have what you need. From car stereo, mid range speakers, tweeters, sub woofers, amplifiers and other car accessories",
+      "image": "https://fixtech.co.ke/uploads/product/Konica-Minolta-Bizhub-227-A3-MFP-2GB-fb_pixels.jpg",
+      "description": "We are the most reliable vendors of new & ex-uk photocopiers & printers, laptops and computers and their accessories, you won't regret choosing us as your number one business partner ",
       "address": {
          "@type": "PostalAddress",
-         "streetAddress": " Munyu Trade centre,6th Floor,Shop G3",
+         "streetAddress": "Njugu Lane, Off Moi Avenue",
          "addressLocality": "Nairobi",
          "addressRegion": "Kenya",
          "postalCode": "00100",
          "addressCountry": "Kenya"
       },
        "openingHours": "Mo 01:00-01:00 Tu 01:00-01:00 We 01:00-01:00 Th 01:00-01:00 Fr 01:00-01:00 Sa 01:00-01:00 Su 01:00-01:00",
-       "telephone": "+254794301190"
+       "telephone": "+254701305462"
     }
 </script>
