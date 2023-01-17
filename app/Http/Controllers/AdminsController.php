@@ -1305,7 +1305,7 @@ public function add_Product(Request $request){
     }
     //Additional images
 
-    $slung = str_slug($request->name);
+    $slung = Str::slug($value->name);
     $Product = new Product;
     $Product->name = $request->name;
     $Product->slung = $slung;
@@ -1477,7 +1477,7 @@ public function edit_Product(Request $request, $id){
 
 
     $updateDetails = array(
-        'name' => $request->name,
+        'name' => Str::slug($request->name),
         'slung' => $slung,
         'replaced' => $request->replaced,
         'meta' => $request->meta,
