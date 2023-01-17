@@ -1477,8 +1477,8 @@ public function edit_Product(Request $request, $id){
 
 
     $updateDetails = array(
-        'name' => Str::slug($request->name),
-        'slung' => $slung,
+        'name' => $request->name,
+        'slung' => Str::slug($request->name),
         'replaced' => $request->replaced,
         'meta' => $request->meta,
         'iframe' => $request->iframe,
