@@ -428,7 +428,7 @@
                                 <div class="col-lg-3 col-md-6 col-sm-6 pb-xs-30">
                                     <div class="li-shipping-inner-box">
                                         <div class="shipping-icon">
-                                            <img src="{{asset('theme/images/shipping-icon/3.png')}}" alt="Amani Vehicle Sounds Shipping Icon">
+                                            <img src="{{asset('theme/images/shipping-icon/3.png')}}" alt="Fixtech Printer Solutions Vehicle Sounds Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
                                             <h2>Shop with Confidence</h2>
@@ -441,7 +441,7 @@
                                 <div class="col-lg-3 col-md-6 col-sm-6 pb-xs-30">
                                     <div class="li-shipping-inner-box">
                                         <div class="shipping-icon">
-                                            <img src="{{asset('theme/images/shipping-icon/4.png')}}" alt="Amani Vehicle Sounds Shipping Icon">
+                                            <img src="{{asset('theme/images/shipping-icon/4.png')}}" alt="Fixtech Printer Solutions Vehicle Sounds Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
                                             <h2>24/7 Help Center</h2>
@@ -597,8 +597,8 @@
                                 <!-- Footer Payment Area End Here -->
                                 <!-- Begin Copyright Area -->
                                 <div class="copyright text-center pt-25">
-                                    <!--<span>Copyright &copy; <?php echo date('Y'); ?> <a style="color:#ce171f; padding:5px; font-weight:400;" target="_blank" href="https://www.amanivehiclesounds.co.ke/copyright"><?php echo $Settings->sitename ?> </a> All Rights Reserved | Powered By <a style="color:#ce171f; padding:5px; font-weight:400;" href="http://designekta.com">Designekta Studios</a></span>-->
-                                    <span>Copyright &copy; <?php echo date('Y'); ?> <a style="color:#ce171f; padding:5px; font-weight:400;" target="_blank" href="https://www.amanivehiclesounds.co.ke/copyright"><?php echo $Settings->sitename ?> </a> All Rights Reserved</span>
+                                    <!--<span>Copyright &copy; <?php echo date('Y'); ?> <a style="color:#ce171f; padding:5px; font-weight:400;" target="_blank" href="https://www.Fixtech Printer Solutionsvehiclesounds.co.ke/copyright"><?php echo $Settings->sitename ?> </a> All Rights Reserved | Powered By <a style="color:#ce171f; padding:5px; font-weight:400;" href="http://designekta.com">Designekta Studios</a></span>-->
+                                    <span>Copyright &copy; <?php echo date('Y'); ?> <a style="color:#ce171f; padding:5px; font-weight:400;" target="_blank" href="{{url('/')}}/copyright"><?php echo $Settings->sitename ?> </a> All Rights Reserved</span>
                                 </div>
                                 <!-- Copyright Area End Here -->
                             </div>

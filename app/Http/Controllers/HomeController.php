@@ -14,7 +14,7 @@ use App\Models\Services;
 use App\Slider;
 use App\Subscriber;
 use App\RFP;
-use App\Term;
+use App\Models\Term;
 use App\Models\Product;
 use App\Delivery;
 use App\User;

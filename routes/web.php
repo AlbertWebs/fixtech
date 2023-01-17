@@ -164,12 +164,16 @@ Route::post('/cart/update', 'App\Http\Controllers\CartController@update');
 Route::get('/cart/compare', 'App\Http\Controllers\CartController@compare');
 
 
+
+
+
+Auth::routes();
 Route::post('cart/checkout/updateShipping', 'App\Http\Controllers\CheckoutController@updateShipping');
 // Checkout Routes
 Route::get('cart/checkout','App\Http\Controllers\CheckoutController@index');
 Route::get('cart/checkout/checkout_billing','App\Http\Controllers\CheckoutController@checkout_billing');
 Route::get('cart/checkout/shipping_method','App\Http\Controllers\CheckoutController@shipping_method');
-Route::get('cart/checkout/payment','App\Http\Controllers\CheckoutController@payment');
+Route::get('cart/checkout/payment','App\Http\Controllers\CheckoutController@payment')->name('payment.route');
 Route::get('cart/checkout/order','App\Http\Controllers\CheckoutController@checkout_confirm');
 Route::post('cart/checkout/formvalidate', 'App\Http\Controllers\CheckoutController@formvalidate');
 Route::post('cart/checkout/create-user', 'App\Http\Controllers\CheckoutController@create');
@@ -187,9 +191,6 @@ Route::post('payments/veryfy/sitoki','PaymentsConroller@stk'); //The Lipa na MPE
 Route::get('mpesa/confirm','PaymentsConroller@confirm');             //Rquired URL
 Route::get('mpesa/validate','PaymentsConroller@validation');         //Rquired URL
 Route::get('mpesa/register','PaymentsConroller@register');           //Rquired URL
-
-
-Auth::routes();
 
 Route::group(['prefix'=>'admin'], function(){
 

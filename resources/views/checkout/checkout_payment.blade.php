@@ -76,11 +76,11 @@
                                             </form>
                                         </div>
                                       <!--  -->
-                                      <h3><span class="normal_text">Order Totals</span> <span style="color:#ce171f">{{Cart::total()}}</span></h3>
+                                      <h3><span class="normal_text">Order Totals</span> <span style="color:#ce171f">{{\Cart::getTotal()}}</span></h3>
                                       <h3><span class="normal_text">Net Total</span>
                                           <span style="color:#ce171f">KES
                                              <?php
-                                                 $TotalCart = Cart::total();
+                                                 $TotalCart = \Cart::getTotal();
                                                  $PrepeTotalCart = str_replace( ',', '', $TotalCart );
                                                  $FormatTotalCart = round($PrepeTotalCart, 0);
                                                  $ShippingFee = $Shipping;
@@ -93,7 +93,7 @@
                                     </div>
 
                                     <div id="accordion" role="tablist" class="price_method">
-                                        <div class="card">
+                                        {{-- <div class="card">
                                             <div class="card-header" role="tab" id="headingOne">
                                                 <h5 class="mb-0">
                                                     <a data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
@@ -119,7 +119,7 @@
                                                         <li>Enter Amount KSH
                                                           <strong>
                                                           <?php
-                                                              $TotalCart = Cart::total();
+                                                              $TotalCart = \Cart::getTotal();
                                                               $PrepeTotalCart = str_replace( ',', '', $TotalCart );
                                                               $FormatTotalCart = round($PrepeTotalCart, 0);
                                                               $ShippingFee = $Shipping;
@@ -148,7 +148,7 @@
                                                     </ol>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
 
                                         <div class="card">
                                             <div class="card-header" role="tab" id="headingThree">
@@ -187,7 +187,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card">
+                                        {{-- <div class="card">
                                             <div class="card-header" role="tab" id="headingfour">
                                                 <h5 class="mb-0">
                                                     <a class="collapsed" data-toggle="collapse" href="#collapsefour" role="button" aria-expanded="false" aria-controls="collapsefour">
@@ -237,7 +237,7 @@
                                                     <!-- Shopping Cart -->
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
 
                                 </div>

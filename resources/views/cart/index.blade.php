@@ -1,7 +1,7 @@
 @extends('front.master')
 @section('content')
 
-            
+
             <div class="breadcrumb-area">
                 <div class="container">
                     <div class="breadcrumb-content">
@@ -29,7 +29,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                       
+
                                 <div class="table-content table-responsive">
                                     <table class="table">
                                         <thead>
@@ -44,7 +44,7 @@
                                         </thead>
                                         <tbody>
                                         @foreach($CartItems as $CartItem)
-                                        <?php 
+                                        <?php
                                                         $Products = DB::table('product')->where('id',$CartItem->id)->get();
                                         ?>
                                         @foreach($Products as $Product)
@@ -90,9 +90,9 @@
                                         <div class="cart-page-total">
                                             <h2>Cart totals</h2>
                                             <ul>
-                                                <li>Subtotal <span>KES {{Cart::subtotal()}}</span></li>
+                                                <li>Subtotal <span>KES {{Cart::getSubTotal()}}</span></li>
                                                 <li>Shipping <span><a href="{{url('/delivery')}}">Fee May Apply</a></span></li>
-                                                <li>Total <span>KES {{Cart::total()}}</span></li>
+                                                <li>Total <span>KES {{Cart::getTotal()}}</span></li>
                                             </ul>
                                             <a href="{{url('/cart/checkout')}}">Proceed to checkout</a>
                                         </div>

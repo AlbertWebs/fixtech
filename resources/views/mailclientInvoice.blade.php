@@ -117,7 +117,7 @@
                 <tr>
                     <td align="center" valign="top" style="padding: 15px 0;" class="logo">
                         <a href="{{url('/')}}" target="_blank">
-                            <img alt="Amani Vehicle Sounds" src="https://amanivehiclesounds.co.ke/uploads/logo/amaniCropped.png" width="200" height="160" style="display: block; font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size: 16px;" border="0">
+                            <img alt="Fixtech Printers Solutions" src="http://fixtech.co.ke/uploads/logo/fixtechLogo.jpeg" width="200" height="160" style="display: block; font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size: 16px;" border="0">
                         </a>
                     </td>
                 </tr>
@@ -166,13 +166,13 @@
             <td align="center" valign="top" width="500">
             <![endif]-->
             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 500px;" class="responsive-table">
-               
+
                 <tr>
                     <td>
                         <!-- TWO COLUMNS -->
                         <table cellspacing="0" cellpadding="0" border="0" width="100%">
                             @foreach($CartItems as $CartItem)
-                            <?php 
+                            <?php
                             $Products = DB::table('product')->where('id',$CartItem->id)->get();
                             ?>
                             @foreach($Products as $Product)
@@ -349,7 +349,7 @@
             <![endif]-->
         </td>
     </tr>
-    <tr>
+    {{-- <tr>
         <td bgcolor="#ffffff" align="center" style="padding: 15px;">
             <table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table">
                 <tr>
@@ -359,7 +359,7 @@
                                 <!-- COPY -->
                                 <td align="center" style="font-size: 32px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding-copy">Do you wish to pay?</td>
                             </tr>
-                           
+
                             <tr>
                                 <td align="center">
                                     <!-- BULLETPROOF BUTTON -->
@@ -386,11 +386,11 @@
             </table>
             <![endif]-->
         </td>
-    </tr>
+    </tr> --}}
     <tr>
         <td bgcolor="#ffffff" align="center" style="padding: 20px 0px;">
             <!--[if (gte mso 9)|(IE)]>
-            <table align="center" border="0" cellspacing="0" cellpadding="0" width="500"> 
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="500">
             <tr>
             <td align="center" valign="top" width="500">
             <![endif]-->

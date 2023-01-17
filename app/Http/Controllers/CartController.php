@@ -38,7 +38,7 @@ class CartController extends Controller
         $SEOSettings = DB::table('seosettings')->get();
         foreach ($SEOSettings as $Settings) {
             SEOMeta::setTitle('Your Cart  - ' . $Settings->sitename . ' ');
-            SEOMeta::setDescription('Vehicle Sounds Systems in Kenya, Car Sound Systems in Kenya, Car alarm Systems in Kenya' . $Settings->welcome . '');
+            SEOMeta::setDescription('Fixtech Printer Solutions, Commercial Printers, Tonners, Bizhub, Kyocera,  Ricoh Printers' . $Settings->welcome . '');
             SEOMeta::setCanonical('' . $Settings->url . '');
             OpenGraph::setDescription('' . $Settings->welcome . '');
             OpenGraph::setTitle('' . $Settings->sitename . ' - ' . $Settings->welcome . '');
@@ -48,9 +48,9 @@ class CartController extends Controller
             Twitter::setSite('' . $Settings->twitter . '');
         $page_title = 'Your Cart';
         $SiteSettings = DB::table('sitesettings')->get();
-        $CartItems = Cart::content();
+        $CartItems = \Cart::getContent();;
         $page_name = 'Your Cart';
-        $keywords = 'Amani Vehicle Sounds';
+        $keywords = 'Fixtech Printer Solutions';
 
         return view('cart.index', compact('keywords','page_name','CartItems','page_title','SiteSettings'));
         }
@@ -62,7 +62,7 @@ class CartController extends Controller
         $SEOSettings = DB::table('seosettings')->get();
         foreach ($SEOSettings as $Settings) {
             SEOMeta::setTitle('Your WishList  - ' . $Settings->sitename . ' ');
-            SEOMeta::setDescription('Vehicle Sounds Systems in Kenya, Car Sound Systems in Kenya, Car alarm Systems in Kenya' . $Settings->welcome . '');
+            SEOMeta::setDescription('Fixtech Printer Solutions, Commercial Printers, Tonners, Bizhub, Kyocera,  Ricoh Printers' . $Settings->welcome . '');
             SEOMeta::setCanonical('' . $Settings->url . '');
             OpenGraph::setDescription('' . $Settings->welcome . '');
             OpenGraph::setTitle('' . $Settings->sitename . ' - ' . $Settings->welcome . '');
@@ -80,7 +80,7 @@ class CartController extends Controller
 
         $CartItems = Wishlist::getUserWishlist($user_id);
         $page_name = 'Your Cart';
-        $keywords = 'Amani Vehicle Sounds';
+        $keywords = 'Fixtech Printer Solutions';
 
         return view('cart.wishlist', compact('keywords','page_name','CartItems','page_title','SiteSettings'));
         }
@@ -92,7 +92,7 @@ class CartController extends Controller
         $SEOSettings = DB::table('seosettings')->get();
         foreach ($SEOSettings as $Settings) {
             SEOMeta::setTitle('Compare Products  - ' . $Settings->sitename . ' ');
-            SEOMeta::setDescription('Vehicle Sounds Systems in Kenya, Car Sound Systems in Kenya, Car alarm Systems in Kenya' . $Settings->welcome . '');
+            SEOMeta::setDescription('Fixtech Printer Solutions, Commercial Printers, Tonners, Bizhub, Kyocera,  Ricoh Printers' . $Settings->welcome . '');
             SEOMeta::setCanonical('' . $Settings->url . '');
             OpenGraph::setDescription('' . $Settings->welcome . '');
             OpenGraph::setTitle('' . $Settings->sitename . ' - ' . $Settings->welcome . '');
@@ -104,7 +104,7 @@ class CartController extends Controller
         $SiteSettings = DB::table('sitesettings')->get();
 
         $page_name = 'Compare Products';
-        $keywords = 'Amani Vehicle Sounds';
+        $keywords = 'Fixtech Printer Solutions';
 
 
         return view('cart.compare', compact('keywords','page_name','page_title','SiteSettings','CountCompare'));
@@ -211,7 +211,7 @@ class CartController extends Controller
 //         Cart::add($id, $product->service, 1,$product->price);
 //         $page_title = 'Your Cart';
 //         $SiteSettings = DB::table('sitesettings')->get();
-//         $CartItems = Cart::content();
+//         $CartItems = \Cart::getContent();;
 
 //         return view('cart.index', compact('CartItems','page_title','SiteSettings'));
 //    }
@@ -219,7 +219,7 @@ class CartController extends Controller
     public function addItem($id){
          $product = Product::find($id); //This gets product by id
          Cart::add($id, $product->name, 1,$product->price);
-          $res =  Cart::content();
+          $res =  \Cart::getContent();;
           $count = Cart::count();
           $Total = Cart::subtotal();
           return json_encode(array($count, $Total));
@@ -271,7 +271,7 @@ class CartController extends Controller
                             $PriceOFF = $value->price;
                             $CouponID = $value->id;
                             //Get Cart Price
-                            $cartItems = Cart::content();
+                            $cartItems = \Cart::getContent();;
                             foreach($cartItems as $cartPrice){
                                 $cartPriceVar = $cartPrice->price;
                                 $newPrice = $cartPriceVar - $PriceOFF;
@@ -310,7 +310,7 @@ class CartController extends Controller
                             $PriceOFF = $value->price;
                             $CouponID = $value->id;
                             //Get Cart Price
-                            $cartItems = Cart::content();
+                            $cartItems = \Cart::getContent();;
                             foreach($cartItems as $cartPrice){
                                 $cartPriceVar = $cartPrice->price;
                                 $newPrice = $cartPriceVar - $PriceOFF;
