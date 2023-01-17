@@ -1305,7 +1305,7 @@ public function add_Product(Request $request){
     }
     //Additional images
 
-    $slung = Str::slug($value->name);
+    $slung = Str::slug($request->name);
     $Product = new Product;
     $Product->name = $request->name;
     $Product->slung = $slung;
