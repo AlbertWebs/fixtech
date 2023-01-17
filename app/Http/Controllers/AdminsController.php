@@ -1240,41 +1240,27 @@ public function add_Product(Request $request){
 
     $path = 'uploads/product';
     if(isset($request->fb_pixels)){
-        $fileSize = $request->file('fb_pixels')->getClientSize();
-            if($fileSize>=1800000){
-            Session::flash('message', "File Exceeded the maximum allowed Size");
-            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            return Redirect::back();
-            }else{
-
-                $file = $request->file('fb_pixels');
-                /** Renaming Edits */
-                $extension = $file->getClientOriginalExtension();
-                $image_main_temp = $request->name.'-fb_pixels.'.$extension;
-                $fb_pixels = str_replace(' ', '-',$image_main_temp);
-                $file->move($path, $fb_pixels);
-                /* Renaming Edits Ends*/
-            }
-    }else{
+        $file = $request->file('fb_pixels');
+        /** Renaming Edits */
+        $extension = $file->getClientOriginalExtension();
+        $image_main_temp = $request->name.'-fb_pixels.'.$extension;
+        $fb_pixels = str_replace(' ', '-',$image_main_temp);
+        $file->move($path, $fb_pixels);
+        /* Renaming Edits Ends*/
+    }
+    else
+    {
         $fb_pixels = $request->pro_img_cheat;
     }
 
     if(isset($request->thumbnail)){
-        $fileSize = $request->file('thumbnail')->getClientSize();
-            if($fileSize>=1800000){
-            Session::flash('message', "File Exceeded the maximum allowed Size");
-            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            return Redirect::back();
-            }else{
-
-                $file = $request->file('thumbnail');
-                /** Renaming Edits */
-                $extension = $file->getClientOriginalExtension();
-                $image_main_temp = $request->name.'-thumbnail.'.$extension;
-                $thumbnail = str_replace(' ', '-',$image_main_temp);
-                $file->move($path, $thumbnail);
-                /* Renaming Edits Ends*/
-            }
+        $file = $request->file('thumbnail');
+        /** Renaming Edits */
+        $extension = $file->getClientOriginalExtension();
+        $image_main_temp = $request->name.'-thumbnail.'.$extension;
+        $thumbnail = str_replace(' ', '-',$image_main_temp);
+        $file->move($path, $thumbnail);
+        /* Renaming Edits Ends*/
     }else{
         $thumbnail = $request->pro_img_cheat;
     }
@@ -1282,63 +1268,39 @@ public function add_Product(Request $request){
 
 
     if(isset($request->image_one)){
-        $fileSize = $request->file('image_one')->getClientSize();
-            if($fileSize>=1800000){
-            Session::flash('message', "File Exceeded the maximum allowed Size");
-            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            return Redirect::back();
-            }else{
-
-                $file = $request->file('image_one');
-                /** Renaming Edits */
-                $extension = $file->getClientOriginalExtension();
-                $image_main_temp = $request->name.'-001.'.$extension;
-                $image_one = str_replace(' ', '-',$image_main_temp);
-                $file->move($path, $image_one);
-                /* Renaming Edits Ends*/
-            }
+        $file = $request->file('image_one');
+        /** Renaming Edits */
+        $extension = $file->getClientOriginalExtension();
+        $image_main_temp = $request->name.'-001.'.$extension;
+        $image_one = str_replace(' ', '-',$image_main_temp);
+        $file->move($path, $image_one);
+        /* Renaming Edits Ends*/
     }else{
         $image_one = $request->pro_img_cheat;
     }
 
     if(isset($request->image_two)){
-        $fileSize = $request->file('image_two')->getClientSize();
-         if($fileSize>=1800000){
-            Session::flash('message', "File Exceeded the maximum allowed Size");
-            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-
-         }else{
-
-             $file = $request->file('image_two');
-             /** Renaming Edits */
-             $extension = $file->getClientOriginalExtension();
-             $image_main_temp = $request->name.'-002.'.$extension;
-             $image_two = str_replace(' ', '-',$image_main_temp);
-             $file->move($path, $image_two);
-             /* Renaming Edits Ends*/
-         }
+        $file = $request->file('image_two');
+        /** Renaming Edits */
+        $extension = $file->getClientOriginalExtension();
+        $image_main_temp = $request->name.'-002.'.$extension;
+        $image_two = str_replace(' ', '-',$image_main_temp);
+        $file->move($path, $image_two);
     }else{
         $image_two = $request->pro_img_cheat;
     }
 
 
     if(isset($request->image_three)){
-        $fileSize = $request->file('image_three')->getClientSize();
-        if($fileSize>=1800000){
-           Session::flash('message', "File Exceeded the maximum allowed Size");
-           Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-
-        }else{
-
-            $file = $request->file('image_three');
-             /** Renaming Edits */
-             $extension = $file->getClientOriginalExtension();
-             $image_main_temp = $request->name.'-003.'.$extension;
-             $image_three = str_replace(' ', '-',$image_main_temp);
-             $file->move($path, $image_three);
-             /* Renaming Edits Ends*/
-        }
-    }else{
+        $file = $request->file('image_three');
+        /** Renaming Edits */
+        $extension = $file->getClientOriginalExtension();
+        $image_main_temp = $request->name.'-003.'.$extension;
+        $image_three = str_replace(' ', '-',$image_main_temp);
+        $file->move($path, $image_three);
+        /* Renaming Edits Ends*/
+    }
+    else{
         $image_three = $request->pro_img_cheat;
     }
     //Additional images
@@ -1449,55 +1411,32 @@ public function edit_Product(Request $request, $id){
     $path = 'uploads/product';
 
     if(isset($request->thumbnail)){
-        $fileSize = $request->file('thumbnail')->getClientSize();
-            if($fileSize>=1800000){
-            Session::flash('message', "File Exceeded the maximum allowed Size");
-            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            return Redirect::back();
-            }else{
+        $file = $request->file('thumbnail');
+        /** Renaming Edits */
+        $extension = $file->getClientOriginalExtension();
+        $image_main_temp = $request->name.'-thumbnail.'.$extension;
+        $thumbnail = str_replace(' ', '-',$image_main_temp);
+        $file->move($path, $thumbnail);
+        /* Renaming Edits Ends*/
 
-                $file = $request->file('thumbnail');
-                /** Renaming Edits */
-                $extension = $file->getClientOriginalExtension();
-                $image_main_temp = $request->name.'-thumbnail.'.$extension;
-                $thumbnail = str_replace(' ', '-',$image_main_temp);
-                $file->move($path, $thumbnail);
-                /* Renaming Edits Ends*/
-            }
     }else{
         $thumbnail = $request->thumbnail_cheat;
     }
 
 
     if(isset($request->image_one)){
-        $fileSize = $request->file('image_one')->getClientSize();
-            if($fileSize>=1800000){
-            Session::flash('message', "File Exceeded the maximum allowed Size");
-            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            return Redirect::back();
-            }else{
-                $file = $request->file('image_one');
-                /** Renaming Edits */
-                $extension = $file->getClientOriginalExtension();
-                $image_main_temp = $request->name.'-001.'.$extension;
-                $image_one = str_replace(' ', '-',$image_main_temp);
-                $file->move($path, $image_one);
-                /* Renaming Edits Ends*/
-
-
-            }
+        $file = $request->file('image_one');
+        /** Renaming Edits */
+        $extension = $file->getClientOriginalExtension();
+        $image_main_temp = $request->name.'-001.'.$extension;
+        $image_one = str_replace(' ', '-',$image_main_temp);
+        $file->move($path, $image_one);
+        /* Renaming Edits Ends*/
     }else{
         $image_one = $request->image_one_cheat;
     }
 
     if(isset($request->image_two)){
-        $fileSize = $request->file('image_two')->getClientSize();
-         if($fileSize>=1800000){
-            Session::flash('message_image_two', "File Exceeded the maximum allowed Size");
-            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-
-         }else{
-
             $file = $request->file('image_two');
             /** Renaming Edits */
             $extension = $file->getClientOriginalExtension();
@@ -1505,32 +1444,19 @@ public function edit_Product(Request $request, $id){
             $image_twoRaw = str_replace(' ', '-',$image_main_temp);
             $image_two = str_replace('&', 'and',$image_twoRaw);
             $file->move($path, $image_two);
-            /* Renaming Edits Ends*/
-
-
-         }
-    }else{
+    }
+    else{
         $image_two = $request->image_two_cheat;
     }
 
 
     if(isset($request->image_three)){
-        $fileSize = $request->file('image_three')->getClientSize();
-        if($fileSize>=1800000){
-           Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
-           Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-
-        }else{
-
             $file = $request->file('image_three');
             /** Renaming Edits */
             $extension = $file->getClientOriginalExtension();
             $image_main_temp = $request->name.'-003.'.$extension;
             $image_three = str_replace(' ', '-',$image_main_temp);
             $file->move($path, $image_three);
-            /* Renaming Edits Ends*/
-
-        }
     }else{
         $image_three = $request->image_three_cheat;
     }
