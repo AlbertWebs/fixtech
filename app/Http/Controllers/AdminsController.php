@@ -1467,7 +1467,7 @@ public function edit_Product(Request $request, $id){
    }else{
        $stock = 'Out of Stock';
    }
-   $slung = str_slug($request->name);
+//    $slung = str_slug($request->name);
 
 
    $replaced = $request->replaced;
