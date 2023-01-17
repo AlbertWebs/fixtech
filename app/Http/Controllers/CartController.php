@@ -158,6 +158,13 @@ class CartController extends Controller
          return Redirect::back();
     }
 
+    public function removeCart($id){
+
+         \Cart::remove($id);
+
+         return Redirect::back();
+    }
+
     public function addWishlist($id,$user){
         Wishlist::add($id, $user);
         return Redirect::back();

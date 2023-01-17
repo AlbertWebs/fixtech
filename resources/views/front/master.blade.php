@@ -278,7 +278,7 @@
                                                             <h6><a href="{{url('/')}}/product/{{$Product->slung}}">{{$Product->name}}</a></h6>
                                                             <span>KES{{$Product->price}} x {{$CartItem->qty}}</span>
                                                         </div>
-                                                        <button onClick="window.location='{{url('/')}}/cart/destroy/{{$CartItem->rowId}}';" class="close" title="Remove">
+                                                        <button onClick="window.location='{{url('/')}}/cart/destroy/{{$Product->id}}';" class="close" title="Remove">
                                                             <i class="fa fa-close"></i>
                                                         </button>
 

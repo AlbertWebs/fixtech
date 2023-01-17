@@ -148,6 +148,8 @@ Route::get('/cart/wishlist','App\Http\Controllers\CartController@wishlist');
 Route::get('/cart/removewishlist/{rowId}/{user}','App\Http\Controllers\CartController@removeWishlist');
 
 Route::get('/cart/destroy/{rowId}','App\Http\Controllers\CartController@destroy');
+Route::get('/cart/destroy/{rowId}','App\Http\Controllers\CartController@removeCart');
+
 Route::get('/cart/destroyCompare/{rowId}','App\Http\Controllers\CartController@destroyCompare');
 Route::get('cart/addItem/{id}','App\Http\Controllers\CartController@addItem');
 Route::get('cart/addWishlist/{id}/{user}','App\Http\Controllers\CartController@addWishlist');
