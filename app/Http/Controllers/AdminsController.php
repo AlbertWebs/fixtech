@@ -1460,6 +1460,21 @@ public function edit_Product(Request $request, $id){
     }else{
         $image_three = $request->image_three_cheat;
     }
+
+    //
+    if(isset($request->fb_pixels)){
+        $file = $request->file('fb_pixels');
+        /** Renaming Edits */
+        $extension = $file->getClientOriginalExtension();
+        $image_main_temp = $request->name.'-fb_pixels.'.$extension;
+        $fb_pixels = str_replace(' ', '-',$image_main_temp);
+        $file->move($path, $fb_pixels);
+        /* Renaming Edits Ends*/
+    }
+    else
+    {
+        $fb_pixels = $request->fb_pixels;
+    }
     //Additional images
 
    if($request->stock == 'on'){
@@ -1467,14 +1482,9 @@ public function edit_Product(Request $request, $id){
    }else{
        $stock = 'Out of Stock';
    }
-//    $slung = str_slug($request->name);
+   //$slung = str_slug($request->name);
 
-
-   $replaced = $request->replaced;
-
-
-
-
+    $replaced = $request->replaced;
 
     $updateDetails = array(
         'name' => $request->name,
