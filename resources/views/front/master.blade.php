@@ -22,6 +22,8 @@
         <meta name="keywords" content="{{$keywords}}">
         @endisset
 
+        <meta name="google-site-verification" content="Fcwe7TjXo1RC_jSPOgl_Vc5lSRwx03AV1izFz_nJtmc" />
+
 
         <!-- SEO -->
         <link rel="shortcut icon" type="image/x-icon" href="{{url('/')}}/uploads/logo/{{$Settings->favicon}}">
