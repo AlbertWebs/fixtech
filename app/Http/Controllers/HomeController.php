@@ -38,11 +38,11 @@ class HomeController extends Controller
     {
         $SEOSettings = DB::table('seosettings')->get();
         foreach ($SEOSettings as $Settings) {
-            SEOMeta::setTitle(' ' . $Settings->sitename . ' - ' . $Settings->intro . '');
+            SEOMeta::setTitle('Best Commercial Printer Dealer in Nairobi - ' . $Settings->sitename . '');
             SEOMeta::setDescription('Fixtech Printer Solutions, Commercial Printers, Tonners, Bizhub, Kyocera,  Ricoh Printers' . $Settings->welcome . '');
             SEOMeta::setCanonical('' . $Settings->url . '');
             OpenGraph::setDescription('' . $Settings->welcome . '');
-            OpenGraph::setTitle('' . $Settings->sitename . ' - ' . $Settings->welcome . '');
+            OpenGraph::setTitle('Best Commercial Printer Dealer in Nairobi - ' . $Settings->sitename . '');
             OpenGraph::setUrl('' . $Settings->url . '');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
@@ -61,8 +61,7 @@ class HomeController extends Controller
             $page_name = 'Home1';
             $page_title = 'Home Page';
 
-            $keywords = 'Car Sound Systems, Car Alarm Systems, Car Surveillance Systems,   ,in car Accessories  ,car stereo  ,car subwoofer  ,car stereo installation nairobi  , car audio shop
-            ,car stereo shop  ,powered speakers  ,underseat subwoofer  ,car speakers  ,car amplifiers';
+            $keywords = 'Fixtech Printers Solutions, Bizhub Printers, Konica Minolta , Kyocera, HP Laptops';
 
 
             return view('front.index1', compact('Blog', 'keywords', 'Video', 'About', 'SiteSettings', 'page_title', 'Testimonial', 'Slider', 'Services', 'Portfolio', 'page_name'));

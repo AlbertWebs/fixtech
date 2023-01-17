@@ -5,37 +5,17 @@
 @foreach($SiteSettings as $Settings)
 <!-- index288:448-->
 <head>
-
-       {{--  --}}
-<!-- Facebook Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1615384915325712');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1615384915325712&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
-    {{--  --}}
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {!! SEOMeta::generate() !!}
-        <meta property="og:description" content="Car stereo store in Nairobi, Vehicle Sounds Systems in Kenya, Vehicle Accessories in kenya, Car Sound Systems in Kenya, Car alarm Systems in Kenya">
-        <meta property="og:image" content="{{url('/')}}/uploads/logo/{{$Settings->logo}}" />
+        <meta property="og:description" content="Fixtech Printer Solutions, Commercial Printers, Tonners, Bizhub, Kyocera,  Ricoh Printers">
+        <meta property="og:image" content="Konica-Minolta-Bizhub-227-A3-MFP-2GB-fb_pixels.jpg" />
         <meta property="fb:app_id" content="431980657174772" />
         {!! OpenGraph::generate() !!}
-        {!! Twitter::generate() !!}
+        {{-- {!! Twitter::generate() !!}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@amanisounds" />
+        <meta name="twitter:creator" content="@amanisounds" /> --}}
         <meta name="_token" content="{{ csrf_token() }}">
 
         @isset($keywords)
