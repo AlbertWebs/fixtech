@@ -1042,13 +1042,13 @@ class HomeController extends Controller
                         foreach ($SEOSettings as $Settings) {
                             SEOMeta::setTitle(' '.$value->cat.'  | ' . $Settings->sitename .'');
                             SEOMeta::setDescription(''.$value->cat.' In Nairobi');
-                            SEOMeta::setCanonical('' . $Settings->url . '/producta/'.$titlee.'');
+                            SEOMeta::setCanonical('' . $Settings->url . '/products/'.$titlee.'');
                             OpenGraph::setDescription('' . $value->cat . '');
                             OpenGraph::setTitle('' . $value->cat . '');
                             OpenGraph::setUrl('' . $Settings->url . '/product/cat/');
                             OpenGraph::addProperty('type', 'website');
                             Twitter::setTitle('' . $Settings->sitename. '');
-                            Twitter::setSite('@amanisounds');
+                            Twitter::setSite('@');
                             // Set Session Here
                             Session::put('Category', $title);
                             // End Session Here
@@ -1056,7 +1056,7 @@ class HomeController extends Controller
                             $page_title = 'Products';
                             $search_results ='';
                             $search_results_category = '';
-                            $keywords = "$title, $value->keywords";
+                            $keywords = "$title,  $Settings->sitename";
                             $Products = DB::table('product')->where('cat',$value->id)->paginate(24);
                             return view('front.productss', compact('keywords','page_title', 'Products', 'page_name','search_results','search_results_category'));
                     }
