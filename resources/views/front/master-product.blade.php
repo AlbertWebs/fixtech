@@ -914,14 +914,14 @@
 
         <!--Floating WhatsApp javascript-->
         <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
-
+       @foreach($Products as $tProduct)
         <script type="text/javascript">
             $(function () {
                 $('#WAButton').floatingWhatsApp({
                     phone: '+254701305462', //WhatsApp Business phone number
                     headerTitle: 'Chat with us on WhatsApp!', //Popup Title
                     popupMessage: 'Hello, how can we help you?', //Popup Message
-                    message: 'I have just visited {{url('/')}}',
+                    message: 'I have just visited {{url('/')}}/product/{{$tProduct->slung}}',
                     showPopup: true, //Enables popup display
                     buttonImage: '<img src="{{url('/')}}/uploads/icon/whatsapp.svg" />', //Button Image
                     //headerColor: 'crimson', //Custom header color
@@ -931,6 +931,7 @@
                 });
             });
         </script>
+        @endforeach
         <!-- modal -->
         <script>
         $(document).ready(function(){
