@@ -100,7 +100,7 @@
             </div>
             <!-- Slider With Banner Area End Here -->
             @endif
-            <h1 style="font-size:2px; margin:0 auto; color:#fff">Car Audio Shop in Nairobi</h1>
+            <h1 style="font-size:2px; margin:0 auto; color:#fff">Commercial Prnters in Nairobi</h1>
             <!-- Begin Product Area -->
             <div class="product-area pt-60 pb-50 trending-area">
                 <div class="container">
@@ -122,7 +122,7 @@
                             <div class="row">
                                 <div class="product-active owl-carousel">
 
-                                    <?php $Trending = DB::table('product')->where('featured','1')->where('trending','1')->limit('6')->get(); ?>
+                                    <?php $Trending = DB::table('product')->where('featured','1')->where('trending','1')->limit('6')->orderBy('DESC')->get(); ?>
                                     @foreach($Trending as $pro)
                                     {{--  --}}
 
