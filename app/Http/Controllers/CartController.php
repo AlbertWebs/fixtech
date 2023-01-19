@@ -197,28 +197,20 @@ class CartController extends Controller
         $id = $request->id;
         $qty = $request->qty;
         $product = Product::find($id); //This gets product by id
-         Cart::add($id, $product->name, $qty,$product->price);
-
+        //  Cart::add($id, $product->name, $qty,$product->price);
+         \Cart::add($id, $product->name, $qty,$product->price);
         //  Redirect To Cart page
-        return redirect()->action('CartController@index');
+        return redirect()->route('cart.index');
 
     }
-
-
-
-
 
     public function addCartPost(Request $request, $id){
         $product = Product::find($id); //This gets product by id
         $qty = $request->qty;
         //  Cart::add($id, $product->name, $qty,$product->price);
-         \Cart::add($id, $product->name, $qty,$product->price);
-
-         return Redirect::back();
+        \Cart::add($id, $product->name, $qty,$product->price);
+        return Redirect::back();
     }
-
-
-
 
 //     public function addCart($id){
 //         $product = Pricing::find($id); //This gets product by id

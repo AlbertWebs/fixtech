@@ -143,7 +143,7 @@ Route::post('/blog/comment','BlogController@add_comment');
 Auth::routes();
 
 // Cart Routes
-Route::get('/cart','App\Http\Controllers\CartController@index');
+Route::get('/cart','App\Http\Controllers\CartController@index')->name('cart.index');
 Route::get('/cart/wishlist','App\Http\Controllers\CartController@wishlist');
 Route::get('/cart/removewishlist/{rowId}/{user}','App\Http\Controllers\CartController@removeWishlist');
 
