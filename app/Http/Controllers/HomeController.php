@@ -1041,7 +1041,7 @@ class HomeController extends Controller
                         $SEOSettings = DB::table('seosettings')->get();
                         foreach ($SEOSettings as $Settings) {
                             SEOMeta::setTitle(' '.$value->cat.'  | ' . $Settings->sitename .'');
-                            SEOMeta::setDescription(''.$value->cat.' '.$value->keywords.'');
+                            SEOMeta::setDescription(''.$value->cat.' In Nairobi');
                             SEOMeta::setCanonical('' . $Settings->url . '/producta/'.$titlee.'');
                             OpenGraph::setDescription('' . $value->cat . '');
                             OpenGraph::setTitle('' . $value->cat . '');
@@ -1053,7 +1053,6 @@ class HomeController extends Controller
                             Session::put('Category', $title);
                             // End Session Here
                             $page_name = $title;
-
                             $page_title = 'Products';
                             $search_results ='';
                             $search_results_category = '';
@@ -1062,9 +1061,6 @@ class HomeController extends Controller
                             return view('front.productss', compact('keywords','page_title', 'Products', 'page_name','search_results','search_results_category'));
                     }
                 }
-
-
-
             }
 
 

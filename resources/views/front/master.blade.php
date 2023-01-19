@@ -70,11 +70,7 @@
         <!--   COUSTOM CSS link  -->
         <link rel="stylesheet" href="css/style.css">
         <!-- Preloader -->
-        <!--Start of Tawk.to Script-->
-        <script type="text/javascript">
 
-        </script>
-        <!--End of Tawk.to Script-->
          <!--Floating WhatsApp css-->
         <link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
        <!--Jquery-->
