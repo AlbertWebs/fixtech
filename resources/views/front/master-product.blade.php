@@ -87,7 +87,7 @@
         <!--   COUSTOM CSS link  -->
         <link rel="stylesheet" href="css/style.css">
         <!-- Preloader -->
-   
+
          <!--Floating WhatsApp css-->
         <link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
        <!--Jquery-->
@@ -918,9 +918,10 @@
         <script type="text/javascript">
             $(function () {
                 $('#WAButton').floatingWhatsApp({
-                    phone: '+254704804354', //WhatsApp Business phone number
+                    phone: '+254701305462', //WhatsApp Business phone number
                     headerTitle: 'Chat with us on WhatsApp!', //Popup Title
                     popupMessage: 'Hello, how can we help you?', //Popup Message
+                    message: 'I have just visited {{url('/')}}',
                     showPopup: true, //Enables popup display
                     buttonImage: '<img src="{{url('/')}}/uploads/icon/whatsapp.svg" />', //Button Image
                     //headerColor: 'crimson', //Custom header color
