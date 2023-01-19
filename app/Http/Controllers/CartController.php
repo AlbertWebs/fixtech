@@ -211,7 +211,8 @@ class CartController extends Controller
     public function addCartPost(Request $request, $id){
         $product = Product::find($id); //This gets product by id
         $qty = $request->qty;
-         Cart::add($id, $product->name, $qty,$product->price);
+        //  Cart::add($id, $product->name, $qty,$product->price);
+         \Cart::add($id, $product->name, $qty,$product->price);
 
          return Redirect::back();
     }
