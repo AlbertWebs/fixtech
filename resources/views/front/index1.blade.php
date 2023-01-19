@@ -122,7 +122,7 @@
                             <div class="row">
                                 <div class="product-active owl-carousel">
 
-                                    <?php $Trending = DB::table('product')->where('featured','1')->where('trending','1')->limit('6')->orderBy('DESC')->get(); ?>
+                                    <?php $Trending = DB::table('product')->where('featured','1')->where('trending','1')->limit('6')->orderBy('id','DESC')->get(); ?>
                                     @foreach($Trending as $pro)
                                     {{--  --}}
 
