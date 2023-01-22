@@ -311,7 +311,7 @@
                                         <ul>
                                             <li><a href="{{url('/')}}"> Home <i class="fa fa-home" aria-hidden="true"></i></a></li>
 
-                                            <li><a href="{{url('/about-us')}}">About Us </a></li>
+                                            <li><a href="{{url('/contact-us')}}">About Us </a></li>
                                             <li class="megamenu-static-holder"><a href="{{url('/our-products')}}">Our Products</a>
                                                 <?php $Categories = DB::table('category')->limit(4)->inRandomOrder()->get() ?>
                                                 <ul class="megamenu hb-megamenu" style="background-image: url('{{url('/')}}/uploads/categories/@foreach($Categories as $Catt){{$Catt->image}}@endforeach');">
@@ -329,8 +329,8 @@
                                                 </ul>
                                             </li>
 
-                                            <li><a href="{{url('/our-services')}}"> Our Services</a></li>
-                                            <li><a href="{{url('/our-portfolio')}}"> Our Portfolio</a></li>
+                                            <li><a href="{{url('/contact-us')}}"> Our Services</a></li>
+                                            <li><a href="{{url('/contact-us')}}"> Our Portfolio</a></li>
 
                                             <li><a href="{{url('/contact-us')}}"> Contact Us <i class="fa fa-phone" aria-hidden="true"></i></a></li>
 
