@@ -1062,8 +1062,9 @@ class HomeController extends Controller
                             $search_results ='';
                             $search_results_category = '';
                             $keywords = "$title,  $Settings->sitename";
+                            $slung = $value->slung;
                             $Products = DB::table('product')->where('cat',$value->id)->paginate(24);
-                            return view('front.productss', compact('keywords','page_title', 'Products', 'page_name','search_results','search_results_category'));
+                            return view('front.productss', compact('slung','keywords','page_title', 'Products', 'page_name','search_results','search_results_category'));
                     }
                 }
             }

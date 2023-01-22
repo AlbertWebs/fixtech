@@ -11,7 +11,7 @@ class SitemapController extends Controller
     public function index()
     {
         $Product = Product::latest()->get();
-        $Category = Category::latest()->get();
+        $Category = Category::all();
 
         return response()->view('sitemap', [
             'Product' => $Product,

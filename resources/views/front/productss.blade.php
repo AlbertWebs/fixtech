@@ -1,5 +1,5 @@
-@extends('front.master-product')
-@section('content') 
+@extends('front.master-product-category')
+@section('content')
   <!-- Begin Amani`s Breadcrumb Area -->
             <div class="breadcrumb-area">
                 <div class="container">
@@ -14,14 +14,14 @@
             </div>
             <!-- Amani`s Breadcrumb Area End Here -->
             <!-- Begin Amani`s Content Wraper Area -->
-            
+
 
             <!--  -->
             <div class="content-wraper pt-60 pb-60">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                          
+
                             <!-- shop-products-wrapper start -->
                             <div class="shop-products-wrapper">
                                 <div class="tab-content">
@@ -77,7 +77,7 @@
                                                             <div class="add-actions">
                                                                 <ul class="add-actions-link">
                                                                     <li class="add-cart "><a href="{{url('cart/addCart')}}/{{$product->id}}">Buy Now</a></li>
-                                                                    
+
                                                                     <li>
                                                                         <a href="{{url('/')}}/product/{{$product->slung}}" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#view-modal"  id="getProduct" data-url="{{ route('dynamicModal',['id'=>$product->id])}}">
                                                                         <i class="fa fa-eye"></i>
@@ -88,7 +88,7 @@
                                                                       @if(Auth::user())
                                                                         <a class="links-details" href="{{url('/cart/addWishlist/')}}/{{$product->id}}/{{Auth::user()->id}}"><i class="fa fa-heart-o"></i></a>
                                                                         @else
-                                                                        <?php 
+                                                                        <?php
                                                                             // get ip Address
                                                                             $ip = Request::ip();
                                                                         ?>
@@ -106,7 +106,7 @@
                                             </div>
                                         </div>
                                     </div>
-                            
+
                                     <div class="paginatoin-area">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6">
