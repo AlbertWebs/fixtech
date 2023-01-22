@@ -10,8 +10,16 @@
     </url>
     @foreach ($Product as $product)
     <url>
-        <loc>{{ url('/') }}/post/{{ $product->slung }}</loc>
+        <loc>{{ url('/') }}/product/{{ $product->slung }}</loc>
         <lastmod>{{ $product->created_at->tz('UTC')->toAtomString() }}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    @endforeach
+    @foreach ($Category as $cat)
+    <url>
+        <loc>{{ url('/') }}/products/{{ $cat->slung }}</loc>
+        <lastmod>{{ $cat->created_at->tz('UTC')->toAtomString() }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
