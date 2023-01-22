@@ -67,7 +67,7 @@
                                             <textarea name="message" id="contactMessage" ></textarea>
                                         </div>
                                         <div class="col-lg-12 col-md-12" id="TheCapcha">
-                                            <div class="g-recaptcha" data-sitekey="6Ld1MOEZAAAAAFA0hpFQ4DKf0Si330YkpOpKtrH1" data-callback="correctCaptcha"></div>
+                                            <div class="g-recaptcha" data-sitekey="6LdJDgUkAAAAAB6ojpflxQxDcTcwjhZv8RgbSALf" data-callback="correctCaptcha"></div>
                                             <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en"></script>
                                         </div>
                                         <br><br>
