@@ -17,7 +17,7 @@
         @endisset
         <?php $ProductC = 1; ?>
         @foreach($Products as $tProduct)
-        <meta property="og:description" content="{{$tProduct->name}}">
+        <meta property="og:description" content="{{$tProduct->meta}}">
         <meta property="og:image" content="{{url('/')}}/uploads/product/{{$tProduct->image_one}}" />
         <meta property="fb:app_id" content="350937289315471" />
         {{-- <meta property=”og:product:id content=”{{$tProduct->id}}” /> --}}
@@ -38,8 +38,8 @@
         @endif
         <?php $ProductC = $ProductC+1; echo $ProductC; ?>
         @endforeach
-        {!! OpenGraph::generate() !!}
-        {!! Twitter::generate() !!}
+        {{-- {!! OpenGraph::generate() !!}
+        {!! Twitter::generate() !!} --}}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@FixtechPrinter" />
         <!-- SEO -->

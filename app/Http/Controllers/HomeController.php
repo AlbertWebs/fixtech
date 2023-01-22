@@ -46,7 +46,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
 
             $About = DB::table('about')->get();
             $Slider = DB::table('slider')->paginate(1);
@@ -83,7 +83,7 @@ class HomeController extends Controller
             OpenGraph::addProperty('type', 'website');
 
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Contact';
             $page_title = 'Contact Us';
             $SiteSettings = DB::table('sitesettings')->get();
@@ -106,7 +106,7 @@ class HomeController extends Controller
             OpenGraph::addProperty('type', 'website');
 
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Contact';
             $page_title = 'Request Quote';
             $SiteSettings = DB::table('sitesettings')->get();
@@ -130,7 +130,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/about-us');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $Admin = Admin::all();
             $About = DB::table('about')->get();
             $SiteSettings = DB::table('sitesettings')->get();
@@ -155,7 +155,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/terms');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Terms';
             $Term = Term::all();
             $page_title = 'Terms Of Service';
@@ -176,7 +176,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/terms');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Terms';
             $Term = Delivery::all();
             $page_title = 'Terms Of Delivery';
@@ -199,7 +199,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/privacy');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Terms';
             $Privacy = Privacy::all();
             $page_title = 'Privacy Policy';
@@ -220,7 +220,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/privacy');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Terms';
             $Privacy = Privacy::all();
             $page_title = 'Privacy Policy';
@@ -243,7 +243,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/copyright');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Terms';
             $Copyright = DB::table('copyright')->get();
             $page_title = 'Copyright Statement';
@@ -264,7 +264,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/our-services');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Services';
             $Services = Services::all();
             $page_title = 'Our Services';
@@ -395,7 +395,7 @@ class HomeController extends Controller
                     OpenGraph::setUrl('' . $Settings->url . '/search-results?keyword=/'.$search_results_category.'');
                     OpenGraph::addProperty('type', 'website');
                     Twitter::setTitle('' . $Settings->sitename. '');
-                    Twitter::setSite('@amanisounds');
+                    Twitter::setSite('@FixtechPrinter');
                     $ProductsCategory = DB::table('category')->where('cat', 'like', '%' . $request->keyword . '%')->limit(1)->get();
                     $ProductsTag = DB::table('tags')->where('title', 'like', '%' . $request->keyword . '%')->limit(1)->get();
                     $ProductsBrand = DB::table('brands')->where('name', 'like', '%' . $request->keyword . '%')->limit(1)->get();
@@ -484,7 +484,7 @@ class HomeController extends Controller
                     OpenGraph::setUrl('' . $Settings->url . '/products/grid');
                     OpenGraph::addProperty('type', 'website');
                     Twitter::setTitle('' . $Settings->sitename. '');
-                    Twitter::setSite('@amanisounds');
+                    Twitter::setSite('@FixtechPrinter');
                     $ProductsCategory = DB::table('category')->where('keywords', 'like', '%' . $request->search . '%')->limit(4)->get();
                     $ProductsTag = DB::table('tags')->where('title', 'like', '%' . $request->search . '%')->limit(1)->get();
                     $ProductsBrand = DB::table('brands')->where('name', 'like', '%' . $request->search . '%')->limit(1)->get();
@@ -514,7 +514,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/products/grid');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Products';
             $search_results ='';
             $search_results_category = '';
@@ -539,7 +539,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/special-offers');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Products';
             $Copyright = DB::table('copyright')->get();
             $page_title = 'Products';
@@ -563,7 +563,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/products');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Products';
             $Copyright = DB::table('copyright')->get();
             $page_title = 'Products';
@@ -588,7 +588,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/products');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Products';
             $Copyright = DB::table('copyright')->get();
             $page_title = 'Portfolio';
@@ -618,7 +618,7 @@ class HomeController extends Controller
                 OpenGraph::setUrl('' . $Settings->url . '/product/'.$title.'');
                 OpenGraph::addProperty('type', 'product.item');
                 Twitter::setTitle('' . $Settings->sitename. '');
-                Twitter::setSite('@amanisounds');
+                Twitter::setSite('@FixtechPrinter');
                 $page_name = 'details';
                 $Copyright = DB::table('copyright')->get();
                 $page_title = $title;
@@ -709,7 +709,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/products');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'Products';
             $Copyright = DB::table('copyright')->get();
             $page_title = 'Products';
@@ -735,7 +735,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/product/'.$title.'');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'details';
             $Copyright = DB::table('copyright')->get();
             $page_title = $title;
@@ -760,7 +760,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/'.$code.'');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = 'details';
             $Copyright = DB::table('copyright')->get();
             $page_title = $code;
@@ -831,7 +831,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/quote');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_title = 'Get Quote';
             $page_name = 'Get a Quote';
             return view('front.quote', compact('page_title', 'page_name'));
@@ -855,7 +855,7 @@ class HomeController extends Controller
             OpenGraph::addProperty('type', 'website');
 
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
 
             return view('front.who', compact('page_title', 'page_name','Action'));
         }
@@ -877,7 +877,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/rfp');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_title = 'Submit RFP';
             $page_name = 'Submit RFP';
             return view('front.rfp', compact('page_title', 'page_name'));
@@ -936,7 +936,7 @@ class HomeController extends Controller
             OpenGraph::addProperty('type', 'website');
 
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
 
             return view('front.gallery', compact('page_title', 'page_name','Gallery'));
         }
@@ -954,7 +954,7 @@ class HomeController extends Controller
             OpenGraph::setUrl('' . $Settings->url . '/product/brand/');
             OpenGraph::addProperty('type', 'website');
             Twitter::setTitle('' . $Settings->sitename. '');
-            Twitter::setSite('@amanisounds');
+            Twitter::setSite('@FixtechPrinter');
             $page_name = $title;
 
             $page_title = 'Products';
@@ -980,7 +980,7 @@ class HomeController extends Controller
                             OpenGraph::setUrl('' . $Settings->url . '/product/cat/');
                             OpenGraph::addProperty('type', 'website');
                             Twitter::setTitle('' . $Settings->sitename. '');
-                            Twitter::setSite('@amanisounds');
+                            Twitter::setSite('@FixtechPrinter');
                             // Set Session Here
                             Session::put('Category', $title);
                             // End Session Here
@@ -1015,7 +1015,7 @@ class HomeController extends Controller
                             OpenGraph::setUrl('' . $Settings->url . '/product-tags/'.$slung.'');
                             OpenGraph::addProperty('type', 'website');
                             Twitter::setTitle('' . $Settings->sitename. '');
-                            Twitter::setSite('@amanisounds');
+                            Twitter::setSite('@FixtechPrinter');
                             // Set Session Here
 
                             // End Session Here
@@ -1081,7 +1081,7 @@ class HomeController extends Controller
                             OpenGraph::setUrl('' . $Settings->url . '/product/cat/');
                             OpenGraph::addProperty('type', 'website');
                             Twitter::setTitle('' . $Settings->sitename. '');
-                            Twitter::setSite('@amanisounds');
+                            Twitter::setSite('@FixtechPrinter');
                             // Set Session Here
                             Session::put('Category', $title);
                             // End Session Here
