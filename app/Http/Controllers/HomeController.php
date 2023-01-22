@@ -29,10 +29,15 @@ use Illuminate\Support\Facades\DB;
 use OpenGraph;
 use SEOMeta;
 use Twitter;
+use Spatie\Sitemap\SitemapGenerator;
 
 class HomeController extends Controller
 {
 
+    public function sitemap(){
+        $path=url('/');
+        SitemapGenerator::create('https://fixtech.co.ke/')->writeToFile('sitemap.xml');
+    }
 
     public function index1()
     {

@@ -118,7 +118,7 @@ Route::get('get-ip-details', function () {
 
 
 });
-
+Route::get('/sitemap','App\Http\Controllers\SitemapController@index');
 
 // Version Control
 Route::get('/version_control', 'App\Http\Controllers\HomeController@version');
