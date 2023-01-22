@@ -144,7 +144,7 @@
                                         </li>
                                         <!-- Setting Area End Here -->
 
-                                        <li><span class="currency-selector-wrapper"><a style="color:#000;" href="{{url('/about-us')}}">About Us</a></span> </li>
+                                        <li><span class="currency-selector-wrapper"><a style="color:#000;" href="{{url('/contact-us')}}">About Us</a></span> </li>
                                         <li><span class="currency-selector-wrapper"><a style="color:#000;" href="{{url('/contact-us')}}">Help</a></span> </li>
                                         <li><span class="currency-selector-wrapper"><a title="Request Quote" style="color:#000;" href="{{url('/contact-us')}}">Need Installation?</a></span> </li>
 

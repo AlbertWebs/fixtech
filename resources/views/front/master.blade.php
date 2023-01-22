@@ -13,9 +13,9 @@
         <meta property="og:image" content="{{url('/')}}/uploads/product/Konica-Minolta-Bizhub-227-A3-MFP-2GB-fb_pixels.jpg" />
         <meta property="fb:app_id" content="431980657174772" />
         {!! OpenGraph::generate() !!}
-        {{-- {!! Twitter::generate() !!}
+        {{-- {!! Twitter::generate() !!} --}}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@amanisounds" /> --}}
+        <meta name="twitter:creator" content="@FixtechPrinter" />
         <meta name="_token" content="{{ csrf_token() }}">
 
         @isset($keywords)

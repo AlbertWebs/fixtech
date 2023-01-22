@@ -41,7 +41,7 @@
         {!! OpenGraph::generate() !!}
         {!! Twitter::generate() !!}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@accessories254" />
+        <meta name="twitter:creator" content="@FixtechPrinter" />
         <!-- SEO -->
         <link rel="shortcut icon" type="image/x-icon" href="{{url('/')}}/uploads/logo/{{$Settings->favicon}}">
         <!-- Material Design Iconic Font-V2.2.0 -->
@@ -162,7 +162,7 @@
                                         </li>
                                         <!-- Setting Area End Here -->
 
-                                        <li><span class="currency-selector-wrapper"><a style="color:#000;" href="{{url('/about-us')}}">About Us</a></span> </li>
+                                        <li><span class="currency-selector-wrapper"><a style="color:#000;" href="{{url('/contact-us')}}">About Us</a></span> </li>
                                         <li><span class="currency-selector-wrapper"><a style="color:#000;" href="{{url('/contact-us')}}">Help</a></span> </li>
                                         <li><span class="currency-selector-wrapper"><a title="Request Quote" style="color:#000;" href="{{url('/contact-us')}}">Need Installation?</a></span> </li>
 
